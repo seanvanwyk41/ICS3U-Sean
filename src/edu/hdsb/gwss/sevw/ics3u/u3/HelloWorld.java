@@ -1,7 +1,7 @@
 /*
  * Name: HellowWorld.java
  * Date: 24-02-2015 (DD-MM-YYYY)
- * Version: v0.01
+ * Version: v0.02
  * Author: Sean van Wyk
  * Description: Simple Program To Display Hello World to the screan
 */
@@ -17,7 +17,7 @@ public class HelloWorld {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("HelloWorld!");
+        System.out.println("HelloWorld");
         if (1+1==2) {
             System.out.println("Correct");
             
