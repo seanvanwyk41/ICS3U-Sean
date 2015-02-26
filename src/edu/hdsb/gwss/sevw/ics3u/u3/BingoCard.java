@@ -1,5 +1,5 @@
 /*
-* Name: Activity 1
+* Name: BingoCard
 * Date: 25-02-2015 (DD-MM-YYYY)
  * Version: v0.01
  * Author: Sean van Wyk

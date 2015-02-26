@@ -1,7 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+* Name: RockPaperScissorsRules
+* Date: 25-02-2015 (DD-MM-YYYY)
+ * Version: v0.01
+ * Author: Sean van Wyk
+ * Description: Simple Program To Display Rock Paper Scisors Rules
  */
 package edu.hdsb.gwss.sevw.ics3u.u3;
 
