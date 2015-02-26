@@ -9,7 +9,7 @@ package edu.hdsb.gwss.sevw.ics3u.u3;
  *
  * @author Sean
  */
-public class Activity3 {
+public class RockPaperScissorsRules {
 
     /**
      * @param args the command line arguments

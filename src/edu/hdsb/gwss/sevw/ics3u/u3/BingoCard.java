@@ -11,7 +11,7 @@ package edu.hdsb.gwss.sevw.ics3u.u3;
  *
  * @author Sean
  */
-public class Activity1 {
+public class BingoCard {
 
     /**
      * @param args the command line arguments

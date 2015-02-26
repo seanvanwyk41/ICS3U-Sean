@@ -9,7 +9,7 @@ package edu.hdsb.gwss.sevw.ics3u.u3;
  *
  * @author Sean
  */
-public class Activity7 {
+public class SmileyFace {
 
     /**
      * @param args the command line arguments
