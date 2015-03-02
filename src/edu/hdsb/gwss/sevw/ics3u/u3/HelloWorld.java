@@ -1,7 +1,7 @@
 /*
  * Name: HellowWorld.java
  * Date: 24-02-2015 (DD-MM-YYYY)
- * Version: v0.02
+ * Version: v1
  * Author: Sean van Wyk
  * Description: Simple Program To Display Hello World to the screan
 */

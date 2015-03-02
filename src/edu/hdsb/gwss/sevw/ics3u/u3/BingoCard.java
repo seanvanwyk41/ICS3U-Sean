@@ -1,8 +1,8 @@
 /*
 * Name: BingoCard
 * Date: 25-02-2015 (DD-MM-YYYY)
- * Version: v0.01
- * Author: Sean van Wyk
+* Version: v1
+* Author: Sean van Wyk
  * Description: Simple Program To Display BINGO Card
  */
 package edu.hdsb.gwss.sevw.ics3u.u3;

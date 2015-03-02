@@ -1,7 +1,7 @@
 /*
 * Name:CharAssassination
 * Date:  26-02-2015(DD-MM-YYYY)
- * Version: v0.01
+ * Version: v1
  * Author: Sean van Wyk
  * Description: A Simple Program to Demonstrate Different Data Types
  */

@@ -1,7 +1,7 @@
 /*
 * Name: RockPaperScissorsRules
 * Date: 25-02-2015 (DD-MM-YYYY)
- * Version: v0.01
+ * Version: v1
  * Author: Sean van Wyk
  * Description: Simple Program To Display Rock Paper Scisors Rules
  */
