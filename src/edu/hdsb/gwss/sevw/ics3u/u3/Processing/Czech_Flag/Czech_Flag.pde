@@ -1,8 +1,8 @@
 /*
 *Sean van Wyk
 *03/03/2014
-*Bahamas
-*Bahaman Flag
+*Czech_Flag
+*Czech Republic Flag
 *V1.0
 */
 //Constants

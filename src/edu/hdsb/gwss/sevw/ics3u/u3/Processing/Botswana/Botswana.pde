@@ -3,6 +3,7 @@
 *02/03/2015
 *Botswanan
 *Botswanan Flag
+*V 1.0
 variables Stated*/
 final int Flag_W=900;
 final int Flag_H=600;
