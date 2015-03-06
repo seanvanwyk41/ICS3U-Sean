@@ -28,7 +28,7 @@ fill(#D7141A);
 rect(Flag_X,Flag_Y,Flag_W,Flag_H);
 fill(#003F87);
 triangle(Flag_X,Flag_Y,Flag_X,Flag_H,BLU2_X,Flag_Y );
-fill(#FFCC49);
+fill(#F4DB60);
 triangle(YEL1_X,Flag_Y,Flag_X,Flag_H,YEL2_X,Flag_Y );
 fill(#008751);
 triangle(Flag_W,Flag_H,Flag_X,Flag_H,Flag_W,GRN2_Y);
