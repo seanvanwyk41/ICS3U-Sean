@@ -32,7 +32,7 @@ public class Y2K_Problem_Detecter {
     if((current-(birth+1900))>=100){
     int birthyr= birth + 2000;
     int age= current-birthyr;
-    System.out.println("age:" +birthyr);
+    System.out.println("age:" +age);
     }
     else{
     int birthyr = birth + 1900;
