@@ -1,7 +1,7 @@
 /*
 * Name: Acid Rain
 * Date: 13-03-2015 (DD-MM-YYYY)
-* Version: v0.1
+* Version: v1
 * Author: Sean van Wyk
  * Description: Program to determin safe PH levels in rivers
  */
@@ -33,7 +33,11 @@ public class Acid_Rain {
      int pH=input.nextInt();
      
      //if statement logic
-     if (pH >= 6.5 and pH <= 7.5){
-    }
-    }
+     if (pH >= 6.5 && pH <= 7.5){
+         System.out.println("NEAUTRAL-FISH IN STREAMS,RIVERS AND LAKES WILL SURVIVE");}
+     else if (pH < 6.5){
+          System.out.println("TOO ACIDIC-FISH IN STREAMS,RIVERS AND LAKES WILL NOT SURVIVE");}
+     else{ 
+          System.out.println("TOO ALKALINE-FISH IN STREAMS,RIVERS AND LAKES WILL NOT SURVIVE");}
+     }
     }
