@@ -1,7 +1,7 @@
 /*
  * Name: Triangles
 * Date: 13-03-2015 (DD-MM-YYYY)
-* Version: v1
+* Version: v1.1
 * Author: Sean van Wyk
  * Description: Program to check whether a triange is possible and is right angled 
  */
@@ -21,9 +21,9 @@ public class Triangles {
     public static void main(String[] args) {
     // Hardware initialisation
     Scanner input = new Scanner(System.in);
-        
-    // Into
-    System.out.println("Triangle");
+    
+    //Constant
+    int tmp =1;
     
     //Variable input
     System.out.println("Insert the length of side 1:  ");
@@ -33,15 +33,26 @@ public class Triangles {
     System.out.println("Insert the length of side 3:  ");
     int z = input.nextInt();
     
-    // Constant statements
+    //Variable swap
+    if (x>y){
+        tmp=x;
+        x=y;
+        y=tmp;}
+    else if (y>z){
+        tmp=y;
+        y=z;
+        z=tmp;
+    }
+    
+    // variable logic
     double a = Math.pow(x,2);
     double b = Math.pow(y,2);
     double c = Math.pow(z,2);
     
     //If statement logic
-    if((x+z>y)&& (z+y>x) && (x+y>z)){
+    if((x+y>z)){
     System.out.println("These side lengths make a triangle.");
-        if((a+b==c)||(a+c==b)||(b+c==a)){
+        if((a+b==c)){
         System.out.println("This is a right angle triangle.");
         }
         else{
@@ -49,6 +60,6 @@ public class Triangles {
         }
     }
     else{
+            
     System.out.println("These side lengths do not make a triangle.");}
     }}
-    

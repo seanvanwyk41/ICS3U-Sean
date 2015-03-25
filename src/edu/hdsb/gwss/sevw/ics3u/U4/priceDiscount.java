@@ -27,7 +27,7 @@ public class priceDiscount {
     double initialCost= input.nextDouble();
     if (initialCost > 10){
     double finalCost= 0.9*initialCost;
-      System.out.println("Total Cost: " + (money.format(finalCost)));
+      System.out.println("Total Cost: " + ));
     }
     else{
     double finalCost=initialCost;
