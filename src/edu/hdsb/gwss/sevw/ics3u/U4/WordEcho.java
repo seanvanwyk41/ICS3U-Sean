@@ -28,10 +28,15 @@ public class WordEcho {
     //ask get
     System.out.println("Enter word to pass");
     String word = input.nextLine();
+    System.out.println();
     
     //Calculate variable value
-    int length = .length( word );
+    length = word.length();
     
+    while (length>0){
+        System.out.println(word);
+        length=length-1;
+    }
     
     }
     
