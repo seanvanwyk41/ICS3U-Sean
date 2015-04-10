@@ -41,8 +41,8 @@ public class Slot_Machine {
 
             //Get ask
             System.out.println("welcome to Slot machine, you have " + token + " tokens would you like to play. (Y/N) ");
-            //play = input.next();
-            play="Y";
+            play = input.next();
+            
             //Continue play?
             if ("Y".equals(play)) {
 
