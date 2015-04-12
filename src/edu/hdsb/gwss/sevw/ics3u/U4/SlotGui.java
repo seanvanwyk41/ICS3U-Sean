@@ -1,12 +1,17 @@
+package edu.hdsb.gwss.sevw.ics3u.U4;
+
+import java.awt.Image;
+import java.awt.LayoutManager;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.hdsb.gwss.sevw.ics3u.U4;
-
-import java.text.NumberFormat;
-import java.util.Scanner;
 
 /**
  *
@@ -19,7 +24,6 @@ public class SlotGui extends javax.swing.JFrame {
      */
     public SlotGui() {
         initComponents();
-    
     }
 
     /**
@@ -31,206 +35,225 @@ public class SlotGui extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jRadioButton1 = new javax.swing.JRadioButton();
-        title = new javax.swing.JLabel();
+        firstDisplay = new javax.swing.JPanel();
+        secondDisplay = new javax.swing.JPanel();
+        thirdDisplay = new javax.swing.JPanel();
         spin = new javax.swing.JButton();
-        token = new java.awt.Label();
-        tokenTitle = new java.awt.Label();
-        winText = new java.awt.Label();
-        rules = new javax.swing.JLabel();
-        rules1 = new javax.swing.JLabel();
-        rules2 = new javax.swing.JLabel();
-        rules3 = new javax.swing.JLabel();
-
-        jRadioButton1.setText("jRadioButton1");
+        tokenLabel = new java.awt.Label();
+        tokenDisplay = new java.awt.Label();
+        outputBar = new java.awt.Label();
+        spinCountDisplay = new java.awt.Label();
+        spinCountTitle = new java.awt.Label();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(102, 102, 102));
-        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setFocusTraversalPolicyProvider(true);
-        setForeground(new java.awt.Color(102, 102, 102));
 
-        title.setFont(new java.awt.Font("Wide Latin", 0, 24)); // NOI18N
-        title.setForeground(new java.awt.Color(153, 0, 0));
-        title.setText("Big Bucks Slots");
+        javax.swing.GroupLayout firstDisplayLayout = new javax.swing.GroupLayout(firstDisplay);
+        firstDisplay.setLayout(firstDisplayLayout);
+        firstDisplayLayout.setHorizontalGroup(
+            firstDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        firstDisplayLayout.setVerticalGroup(
+            firstDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
-        spin.setFont(new java.awt.Font("BatangChe", 0, 11)); // NOI18N
-        spin.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.background"));
-        spin.setIcon(new javax.swing.ImageIcon("C:\\Users\\Sean\\Pictures\\large.png")); // NOI18N
-        spin.setBorderPainted(false);
-        spin.setContentAreaFilled(false);
-        spin.setMargin(null);
+        javax.swing.GroupLayout secondDisplayLayout = new javax.swing.GroupLayout(secondDisplay);
+        secondDisplay.setLayout(secondDisplayLayout);
+        secondDisplayLayout.setHorizontalGroup(
+            secondDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        secondDisplayLayout.setVerticalGroup(
+            secondDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout thirdDisplayLayout = new javax.swing.GroupLayout(thirdDisplay);
+        thirdDisplay.setLayout(thirdDisplayLayout);
+        thirdDisplayLayout.setHorizontalGroup(
+            thirdDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        thirdDisplayLayout.setVerticalGroup(
+            thirdDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        spin.setText("SPIN!!");
         spin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 spinActionPerformed(evt);
             }
         });
 
-        token.setForeground(new java.awt.Color(153, 0, 0));
+        tokenLabel.setAlignment(java.awt.Label.CENTER);
+        tokenLabel.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        tokenLabel.setText("Tokens");
 
-        tokenTitle.setForeground(new java.awt.Color(153, 0, 0));
-        tokenTitle.setText("Tokens");
+        tokenDisplay.setAlignment(java.awt.Label.CENTER);
+        tokenDisplay.setFont(new java.awt.Font("DFKai-SB", 0, 48)); // NOI18N
+        tokenDisplay.setText("50");
 
-        winText.setForeground(new java.awt.Color(153, 0, 0));
+        outputBar.setBackground(new java.awt.Color(0, 0, 0));
+        outputBar.setForeground(new java.awt.Color(255, 255, 255));
+        outputBar.setText("Welcome To Crazy Slots!!!");
 
-        rules.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        rules.setForeground(new java.awt.Color(153, 0, 0));
-        rules.setText("If all are ones you win 4 tokens.");
-
-        rules1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        rules1.setForeground(new java.awt.Color(153, 0, 0));
-        rules1.setText("If all are ones you win 4 tokens.");
-
-        rules2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        rules2.setForeground(new java.awt.Color(153, 0, 0));
-        rules2.setText("If all are two's you win 6 tokens.");
-
-        rules3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        rules3.setForeground(new java.awt.Color(153, 0, 0));
-        rules3.setText("If all are 4 you win 10 tokens.");
+        spinCountTitle.setName(""); // NOI18N
+        spinCountTitle.setText("Number of Spins!");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(319, Short.MAX_VALUE)
-                        .addComponent(spin, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(spin, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tokenLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(token, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tokenTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(rules, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rules2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(20, 20, 20))
-                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(firstDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(19, 19, 19)
+                        .addComponent(secondDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(rules1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(20, Short.MAX_VALUE))))
+                        .addComponent(thirdDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(spinCountDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(43, 43, 43))
+                            .addComponent(spinCountTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(winText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(rules3, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20))))
+                .addGap(20, 20, 20)
+                .addComponent(outputBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tokenDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(title)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
-                .addComponent(spin, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(92, 92, 92))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(rules)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rules2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rules1, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rules3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(tokenTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(token, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22)
-                .addComponent(winText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(firstDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(secondDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(thirdDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(spinCountTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(spinCountDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(tokenLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spin))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tokenDisplay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(outputBar, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(34, Short.MAX_VALUE))))
         );
+
+        spinCountDisplay.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
+    int token = 50;
+    int spinCount;
     private void spinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_spinActionPerformed
-  //Object initialize    
-        Scanner input = new Scanner(System.in);
+    //Variables Start
+    int first;          //first wheel
+    int second;         //Second wheel
+    int third;          //Third wheel
+           //Token counter
+    String play="Y"; 
+                
+    //Token deduction and display
+    token=token-1;
+    this.tokenDisplay.setText(""+token);
+    
+    //Spin Counter
+    spinCount++;
+    this.spinCountDisplay.setText(""+spinCount);
+    
+    // random number generation
+    first = (int) (Math.random() * 4) + 1;
+    second = (int) (Math.random() * 4) + 1;
+    third = (int) (Math.random() * 4) + 1;
 
-        // Variable Initialising
-        int first;          //first wheel
-        int second;         //Second wheel
-        int third;          //Third wheel
-        int tokens= 50;       //Token counter
-        String play;           //gets if you want to play or not
-        
-        //OutPut Start
-        this.token.setText(""+tokens);
-        
-        // Start Loop; ask/get
-        do {
+    //Import images
+    ImageIcon Lemon = new ImageIcon("Lemon.jpg");
+        Image lemon = Lemon.getImage();
+    ImageIcon Cherry = new ImageIcon("Cherry.jpg");
+        Image cherry = Cherry.getImage();
+    ImageIcon Orange = new ImageIcon("Orange.jpg");
+        Image orange = Orange.getImage();
+    ImageIcon Bar = new ImageIcon("Bar.jpg");
+        Image bar = Bar.getImage();
+    //Slot Output
+    switch (first) {
+        case 1:
+              JPanel firstDisplay = new JPanel
+        case 2:
+        case 3:
+        case 4:
+    }
+    switch (second) {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+    }
+    switch (third) {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+    }
+
+    //Are you a winner
+    if (first == second && second == third) {
+
+        //Switch to calculate wether you win or not
+        switch (first) {
+            case 1:
+                this.outputBar.setText("Three 1's you win 4 tokens!!");
+                token = token + 4;
+                break;
+            case 2:
+                this.outputBar.setText("Three 2's you win 6 tokens!!");
+                token = token + 6;
+                break;
+            case 3:
+                this.outputBar.setText("Three 3's you win 8 tokens!!");
+                token = token + 8;
+                break;
+            case 4:
+                this.outputBar.setText("Three 4's you win 10 tokens!!");
+                token = token + 10;
+                break;
+
+        }
+    } else {
+    this.outputBar.setText("You Lose.");
+    if(token==0){
+    this.outputBar.setText("You ran out of tokens, The machine has automatically restarted to 50 tokens!");
+    token=token+50;
+    }}
             
-            //Get ask
-            System.out.println("welcome to Slot machine, you have " + tokens + " tokens would you like to play. (Y/N) ");
-            play = input.next();
-            
-            //Continue play?
-            if ("Y".equals(play)) {
-
-                //Token deduction
-                tokens = tokens - 1;
-
-                // random number generation
-                first = (int) (Math.random() * 4) + 1;
-                second = (int) (Math.random() * 4) + 1;
-                third = (int) (Math.random() * 4) + 1;
-
-                //Slot Output
-                System.out.print(first);
-                System.out.print(second);
-                System.out.print(third);
-                System.out.println();
-
-                //Are you a winner
-                if (first == second && second == third) {
-
-                    //Switch to calculate wether you win or not
-                    switch (first) {
-                        case 1:
-                            System.out.println("Three 1's you win 4 tokens!!");
-                            tokens = tokens + 4;
-                            break;
-                        case 2:
-                            System.out.println("Three 2's you win 6 tokens!!");
-                            tokens = tokens + 6;
-                            break;
-                        case 3:
-                            System.out.println("Three 3's you win 8 tokens!!");
-                            tokens = tokens + 8;
-                            break;
-                        case 4:
-                            System.out.println("Three 4's you win 10 tokens!!");
-                            tokens = tokens + 10;
-                            break;
-
-                    }
-                } else {
-                    System.out.println("You Lose.");
-                }
-            } else {
-            }
-        } while ("Y".equals(play)&& tokens>0);
-        System.out.println("Thank You for playing please come and lose your hardearned money again.");
+   
     }//GEN-LAST:event_spinActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+                //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
@@ -261,15 +284,14 @@ public class SlotGui extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JLabel rules;
-    private javax.swing.JLabel rules1;
-    private javax.swing.JLabel rules2;
-    private javax.swing.JLabel rules3;
+    private javax.swing.JPanel firstDisplay;
+    private java.awt.Label outputBar;
+    private javax.swing.JPanel secondDisplay;
     private javax.swing.JButton spin;
-    private javax.swing.JLabel title;
-    private java.awt.Label token;
-    private java.awt.Label tokenTitle;
-    private java.awt.Label winText;
+    private java.awt.Label spinCountDisplay;
+    private java.awt.Label spinCountTitle;
+    private javax.swing.JPanel thirdDisplay;
+    private java.awt.Label tokenDisplay;
+    private java.awt.Label tokenLabel;
     // End of variables declaration//GEN-END:variables
 }
