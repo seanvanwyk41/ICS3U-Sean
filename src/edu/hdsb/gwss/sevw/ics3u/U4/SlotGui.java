@@ -198,7 +198,6 @@ public class SlotGui extends javax.swing.JFrame {
     //Slot Output
     switch (first) {
         case 1:
-              JPanel firstDisplay = new JPanel
         case 2:
         case 3:
         case 4:

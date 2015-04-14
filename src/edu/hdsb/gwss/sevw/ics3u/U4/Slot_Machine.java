@@ -3,7 +3,7 @@
  * Date: 07-04-2015 (DD-MM-YYYY)
  * Version: v0.1
  * Author: Sean van Wyk
- * Description: A program to determine 
+ * Description: A simple slot machinr game
  */
 package edu.hdsb.gwss.sevw.ics3u.U4;
 

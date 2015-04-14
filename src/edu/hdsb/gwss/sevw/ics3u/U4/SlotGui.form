@@ -176,9 +176,6 @@
       </Properties>
     </Component>
     <Component class="java.awt.Label" name="spinCountDisplay">
-      <AccessibilityProperties>
-        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
-      </AccessibilityProperties>
     </Component>
     <Component class="java.awt.Label" name="spinCountTitle">
       <Properties>
