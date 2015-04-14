@@ -27,7 +27,7 @@ public class CountingVowels {
         String check;
         int num = 0;
 
-        //ask
+        //ask get
         System.out.println("Please Enter String to check");
         check = input.nextLine();
 
