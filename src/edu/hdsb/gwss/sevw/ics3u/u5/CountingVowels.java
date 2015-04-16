@@ -1,7 +1,7 @@
 /*
  * Name: CountingVowels
  * Date: 14-04-2015 (DD-MM-YYYY)
- * Version: v0.1
+ * Version: v1
  * Author: Sean van Wyk
  * Description:A program that counts the vowels in a string
  */
