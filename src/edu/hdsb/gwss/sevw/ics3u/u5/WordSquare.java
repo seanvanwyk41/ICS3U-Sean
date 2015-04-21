@@ -33,7 +33,6 @@ public class WordSquare {
         //Output Loop
         for (int start = 0; start <= out.length() - 1; start++) {
             System.out.println(out.substring(start, out.length()) + out.substring(0, start));
-            System.out.println();
         }
 
     }
