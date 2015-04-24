@@ -32,7 +32,7 @@ public class SinChecker {
 
         //validation Checking Logic
         if (sin.length() != 9) {
-            System.out.println("Invalid Number: Number too long: "+sin.length());
+            System.out.println("Invalid Number: Number Wrong number of digits: "+sin.length());
         }
         for (int i = 0; i < 8; i++) {
             if ((i % 2) == 1) {
@@ -42,7 +42,6 @@ public class SinChecker {
             }
         }
         testFinal =(int) (10 * (Math.ceil( testFinal/10)) - (testFinal));
-
         //Validation 
         for (int i = 1; i < 7; i += 2) {
             if ((Integer.parseInt("" + sin.charAt(i)) * 2) % 10 != Integer.parseInt("" + sin.charAt(i + 2))) {
