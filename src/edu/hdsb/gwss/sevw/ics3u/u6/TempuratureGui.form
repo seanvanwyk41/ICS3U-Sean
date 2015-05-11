@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="220" max="32767" attributes="0"/>
+                      <Component id="display" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="108" max="32767" attributes="0"/>
+              <Component id="display" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="display">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="mondayLabel" min="-2" pref="66" max="-2" attributes="0"/>
+                          <EmptySpace pref="26" max="32767" attributes="0"/>
+                          <Component id="mondayTemp" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="sundayLabel" min="-2" pref="66" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="sundayTemp" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="tuesdayLabel" min="-2" pref="66" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="tuesdayTemp" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="wedsnesdayLabel" min="-2" pref="66" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="wednesdayTemp" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="thursdayLabel" min="-2" pref="66" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="thursdayTemp" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="fridayLabel" min="-2" pref="66" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="fridayTemp" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="saturdaylabel" min="-2" pref="66" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="saturdayTemp" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="mondayLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="mondayTemp" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="tuesdayLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tuesdayTemp" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="wedsnesdayLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="wednesdayTemp" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="thursdayLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="thursdayTemp" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="fridayLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="fridayTemp" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="saturdaylabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="saturdayTemp" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="sundayLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="sundayTemp" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="22" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="mondayLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Monday"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="tuesdayLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Tuesday"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="wedsnesdayLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Wednesday"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="thursdayLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thursday"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="fridayLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Friday"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="saturdaylabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Saturday"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="sundayLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Sunday"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="mondayTemp">
+        </Component>
+        <Component class="javax.swing.JLabel" name="tuesdayTemp">
+        </Component>
+        <Component class="javax.swing.JLabel" name="wednesdayTemp">
+        </Component>
+        <Component class="javax.swing.JLabel" name="thursdayTemp">
+        </Component>
+        <Component class="javax.swing.JLabel" name="fridayTemp">
+        </Component>
+        <Component class="javax.swing.JLabel" name="saturdayTemp">
+        </Component>
+        <Component class="javax.swing.JLabel" name="sundayTemp">
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tempurature Recorder"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>
