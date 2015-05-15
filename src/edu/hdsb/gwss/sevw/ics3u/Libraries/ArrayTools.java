@@ -144,7 +144,6 @@ public class ArrayTools {
     }
 
     //Linear Search
-
     public static int linearSearch(int[] x, int search) {
         //initialize
         int y = -1;
@@ -162,48 +161,46 @@ public class ArrayTools {
     public static int[] binarySearch(int[] x, int search) {
         //initialize
         int[] y = new int[2];
-        int mid;
-        int low;
-        int high;
+        int midIndex;
+        int lowIndex;
+        int highIndex;
         int startIndex = 0;
         int endIndex = 0;
+        boolean loopStop = false;
 
         //sort
         ArrayTools.selectionSort(x, "down");
 
         // search
-        low = 0;
-        high = x.length - 1;
-        for (int i = 0,run=0; i == 0;) {
-            mid = (low+high)/ 2;
-            if (x[mid] > search) {
-                high = mid - 1;
-                run++;
-            } else if (x[mid] < search) {
-                low = mid + 1;
-                run++;
-            } else if (x[mid] == search) {
-                i = 1;
-                endIndex = mid + 1;
-                startIndex = mid;
-                for (int i2 = 0; i2 == 0;) {
+        lowIndex = 0;
+        highIndex = x.length - 1;
+        while (!loopStop && lowIndex < highIndex) {
+            midIndex = (lowIndex + highIndex) / 2;
+            if (x[midIndex] > search) {
+                highIndex = midIndex - 1;
+            } else if (x[midIndex] < search) {
+                lowIndex = midIndex + 1;
+            } else if (x[midIndex] == search) {
+                endIndex = midIndex + 1;
+                startIndex = midIndex;
+                while(!loopStop){
                     if (endIndex + 1 == search) {
                         endIndex++;
                     } else if (startIndex - 1 == search) {
                         startIndex--;
                     } else {
-                        i2 = 1;
+                       loopStop=true;
                     }
                 }
-            } else if (run>x.length*2) {
+
+            }}
+            if (lowIndex > highIndex) {
                 System.out.println("No Mathces");
             }
-   
+            y[0] = startIndex;
+            y[1] = endIndex;
+            return y;
         }
-        y[0] = startIndex;
-        y[1] = endIndex;
-        return y;
-    }
 
     public static String subIndexString(int[] x, int start, int end) {
         String out = "";

@@ -156,10 +156,11 @@ public class ArrayToolsTester {
          
          System.out.println("--------");
          System.out.println("Test #11");
-         y[7]=11;
-         int[] z;
-         z=ArrayTools.binarySearch(y, 11);
-         assert(z[0]==7);
+         y=x;
+         int z[];
+         for(int i=0;i<y.length;i++){
+         z=ArrayTools.binarySearch(y, y[i]);
+         assert(z[0]==i);}
          System.out.println("//Binary Search");
     }
 
