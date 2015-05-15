@@ -24,7 +24,7 @@ public class ArrayTools {
         return average;
     }
 
-    public static double calculateMax(int[] data) {
+    public static int calculateMax(int[] data) {
         int index = 0;
         for (int i = 0; i < data.length; i++) {
             if (data[index] < data[i]) {
@@ -32,7 +32,7 @@ public class ArrayTools {
             } else {
             }
         }
-        double max = data[index];
+        int max = data[index];
         return max;
     }
 
@@ -47,7 +47,7 @@ public class ArrayTools {
         return index;
     }
 
-    public static double calculateMin(int[] data) {
+    public static int calculateMin(int[] data) {
         int index = 0;
         for (int i = 0; i < data.length; i++) {
             if (data[index] > data[i]) {
@@ -55,7 +55,7 @@ public class ArrayTools {
             } else {
             }
         }
-        double min = data[index];
+        int min = data[index];
         return min;
     }
 
@@ -70,8 +70,8 @@ public class ArrayTools {
         return index;
     }
 
-    public static double calculateTotal(int[] data) {
-        double sum = 0;
+    public static int calculateTotal(int[] data) {
+        int sum = 0;
         for (int i = 0; i < data.length; i++) {
             sum += data[i];
         }
@@ -94,80 +94,72 @@ public class ArrayTools {
     }
 
     //Sorts a array using the selection sort method
-    public static void SelectionSort(int[] x, String order) {
-        for (int i = 0, tmp = 0; i < x.length; i++) {
-            for (int i2 = 0; i2 < x.length - i; i2++) {
-                tmp = ArrayTools.calculateMaxIndex(x, x.length - i);
+    public static void selectionSort(int[] x, String order) {
+        if ("down".equals(order.toLowerCase())) {
+            for (int i = 0, tmp = 0; i < x.length; i++) {
+                for (int i2 = 0; i2 < x.length - i; i2++) {
+                    tmp = ArrayTools.calculateMaxIndex(x, x.length - i);
+                }
+
+                ArrayTools.swap(x, tmp, x.length - 1 - i);
+            }
+        } else if ("up".equals(order.toLowerCase())) {
+            for (int i = 0, tmp = 0; i < x.length; i++) {
+                for (int i2 = 0; i2 < x.length - i; i2++) {
+                    tmp = ArrayTools.calculateMaxIndex(x, x.length - i);
+                }
+                ArrayTools.swap(x, tmp, x.length - 1 - i);
             }
 
-            ArrayTools.swap(x, tmp, x.length - 1 - i);
         }
-        if ("up".equals(order.toLowerCase())) {
-            for (int i = 0; i <= (x.length - 1) / 2; i++) {
-                ArrayTools.swap(x, i, x.length - 1 - i);
-            }
-
-        }
-    }
-
-    //sorts and searches a array using the linear method and returns an array with all mathcing indcies
-    public static int[] LinearSearch(int[] x, int search) {
-        int matchingItems = 0;
-        int[] y = new int[x.length];
-        ArrayTools.populateArray(x, 1, 10);
-
-        ArrayTools.BubbleSort(x, "up");
-        ArrayTools.DisplayArray(x);
-
-        for (int i = 0; search <= x[i]; i++) {
-            if (search == x[i]) {
-                matchingItems++;
-                y[matchingItems] = i;
-            }
-        }
-        return Arrays.copyOf(y, matchingItems);
     }
 
     //Displays all values in an array
-    public static void DisplayArray(int[] x) {
+    public static void displayArray(int[] x) {
         for (int i = (x.length - 1); i >= 0; i--) {
             System.out.println("" + x[i]);
         }
     }
 
     //Bubble sorts in either asending or desending order
-    public static void BubbleSort(int[] x, String order) {
-        for (int i = 0; i < x.length - 1; i++) {
-            for (int i2 = 0; i2 < x.length - 1 - i; i2++) {
-                if (x[i2] > x[i2 + 1]) {
-                    ArrayTools.swap(x, i2, i2 + 1);
+    public static void bubbleSort(int[] x, String order) {
+        if ("down".equals(order.toLowerCase())) {
+            for (int i = 0; i < x.length - 1; i++) {
+                for (int i2 = 0; i2 < x.length - 1 - i; i2++) {
+                    if (x[i2] > x[i2 + 1]) {
+                        ArrayTools.swap(x, i2, i2 + 1);
+                    }
+                }
+            }
+        } else if ("up".equals(order.toLowerCase())) {
+            for (int i = 0; i < x.length - 1; i++) {
+                for (int i2 = 0; i2 < x.length - 1 - i; i2++) {
+                    if (x[i2] > x[i2 + 1]) {
+                        ArrayTools.swap(x, i2, i2 + 1);
+
+                    }
                 }
             }
         }
-        if ("up".equals(order.toLowerCase())) {
-            for (int i = 0; i <= (x.length - 1) / 2; i++) {
-                ArrayTools.swap(x, i, x.length - 1 - i);
-            }
-
-        }
     }
+
     //Linear Search
-    public static int LinearSearch(int[] x, int search) {
+
+    public static int linearSearch(int[] x, int search) {
         //initialize
         int y = -1;
-        
-        for(int i=0;y==-1;i++){
-            if (x[i]==search){
-            y=i;}
+
+        for (int i = 0; y == -1; i++) {
+            if (x[i] == search) {
+                y = i;
+            }
         }
 
-        
         return y;
     }
 
-
     //binary Search
-    public static int[] BinarySearch(int[] x, int search) {
+    public static int[] binarySearch(int[] x, int search) {
         //initialize
         int[] y = new int[2];
         int mid;
@@ -177,18 +169,20 @@ public class ArrayTools {
         int endIndex = 0;
 
         //sort
-        ArrayTools.SelectionSort(x, "down");
-        
+        ArrayTools.selectionSort(x, "down");
+
         // search
-        low = x[0];
-        high = x[x.length - 1];
-        for (int i = 0; i == 0;) {
-            mid = (low + high) / 2;
+        low = 0;
+        high = x.length - 1;
+        for (int i = 0,run=0; i == 0;) {
+            mid = (low+high)/ 2;
             if (x[mid] > search) {
                 high = mid - 1;
+                run++;
             } else if (x[mid] < search) {
                 low = mid + 1;
-            } else if (x[mid]==search){
+                run++;
+            } else if (x[mid] == search) {
                 i = 1;
                 endIndex = mid + 1;
                 startIndex = mid;
@@ -201,21 +195,24 @@ public class ArrayTools {
                         i2 = 1;
                     }
                 }
+            } else if (run>x.length*2) {
+                System.out.println("No Mathces");
             }
-            else {
-            System.out.println("No Mathces");}
-            startIndex=0;
-            endIndex=0;
+   
         }
         y[0] = startIndex;
         y[1] = endIndex;
         return y;
     }
 
-    public static String subIndexString(int[]x,int start, int end){
-    String out="";
-    for(int i=0;i<end-start;i++){
-        out = out +""+(x[start]);}
-    return out;
+    public static String subIndexString(int[] x, int start, int end) {
+        String out = "";
+        for (int i = 0; i < end - start; i++) {
+            out = out + " " + (x[start]);
+        }
+        return out;
     }
 }
+
+//XIX,V,I,XIV,         ,V.,W.,
+//XV/V/MMXV

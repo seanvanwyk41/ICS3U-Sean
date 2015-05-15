@@ -27,8 +27,8 @@ public class Linear {
         int[] x = new int[10];
         ArrayTools.populateArray(x, 1, 10);
         
-        ArrayTools.BubbleSort(x, "up");
-        ArrayTools.DisplayArray(x);
+        ArrayTools.bubbleSort(x, "up");
+        ArrayTools.displayArray(x);
         
         for (int i=0;search<=x[i];i++){
             if (search==x[i]){
