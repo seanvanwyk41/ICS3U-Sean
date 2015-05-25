@@ -1,15 +1,17 @@
 /*
  * Name: SchoolXMLGUI
-* Date: 22-05-2015 (DD-MM-YYYY)
-* Version: v1
-* Author: Sean van Wyk
+ * Date: 22-05-2015 (DD-MM-YYYY)
+ * Version: v1
+ * Author: Sean van Wyk
  * Description: Program to write data in a XML Format
  */
- 
 package edu.hdsb.gwss.sevw.ics3u.U7;
 
-
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import nu.xom.Document;
 import nu.xom.Element;
@@ -40,19 +42,20 @@ public class SchoolXMLGUI extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         runButton = new javax.swing.JButton();
-        headerCode = new javax.swing.JLabel();
+        headerBlock = new javax.swing.JLabel();
         headerDiscription = new javax.swing.JLabel();
         headerTeacher = new javax.swing.JLabel();
         headerBoard = new javax.swing.JLabel();
         tittle = new java.awt.Label();
         jScrollPane2 = new javax.swing.JScrollPane();
         output = new javax.swing.JTextArea();
-        fieldCode = new javax.swing.JTextField();
+        fieldBlock = new javax.swing.JTextField();
         fieldDiscription = new javax.swing.JTextField();
         fieldTeacher = new javax.swing.JTextField();
         fieldBoard = new javax.swing.JTextField();
         update = new javax.swing.JButton();
-        saveButton = new javax.swing.JButton();
+        fieldCourse = new javax.swing.JTextField();
+        courseLable = new javax.swing.JLabel();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -67,13 +70,13 @@ public class SchoolXMLGUI extends javax.swing.JFrame {
             }
         });
 
-        headerCode.setText("Enter Code");
+        headerBlock.setText("Enter Block");
 
         headerDiscription.setText("Enter Description");
 
-        headerTeacher.setText("Enter Name ");
+        headerTeacher.setText("Enter Teacher Name ");
 
-        headerBoard.setText("Eneter Board");
+        headerBoard.setText("Enter Board");
 
         tittle.setText("XML EDITOR");
 
@@ -89,13 +92,7 @@ public class SchoolXMLGUI extends javax.swing.JFrame {
             }
         });
 
-        saveButton.setText("Save(FUTURE UPDATE)");
-        saveButton.setToolTipText("");
-        saveButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                saveButtonActionPerformed(evt);
-            }
-        });
+        courseLable.setText("Enter Course");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -106,30 +103,40 @@ public class SchoolXMLGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(tittle, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(95, 95, 95)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(headerDiscription)
-                                            .addComponent(headerCode)
-                                            .addComponent(headerTeacher)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addGap(101, 101, 101)
+                                                    .addComponent(courseLable))
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addGap(104, 104, 104)
+                                                    .addComponent(headerBlock))
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addGap(57, 57, 57)
+                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addComponent(headerDiscription)
+                                                        .addComponent(headerTeacher))))
+                                            .addGap(2, 2, 2))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                            .addGap(9, 9, 9)
                                             .addComponent(headerBoard)))
-                                    .addComponent(fieldCode)
-                                    .addComponent(fieldDiscription)
-                                    .addComponent(fieldTeacher)
-                                    .addComponent(fieldBoard, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(25, 25, 25))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(runButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(saveButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(update)
-                                .addGap(40, 40, 40)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(runButton)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(update))
+                                    .addComponent(fieldCourse))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(fieldBlock, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(fieldDiscription, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(fieldTeacher, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(fieldBoard, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(18, 18, 18)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,43 +145,49 @@ public class SchoolXMLGUI extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(tittle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29)
+                        .addComponent(courseLable)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(headerCode)
+                        .addComponent(fieldCourse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addComponent(headerBlock)
                         .addGap(10, 10, 10)
-                        .addComponent(fieldCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(fieldBlock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(headerDiscription)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(fieldDiscription, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(headerTeacher, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(7, 7, 7)
-                        .addComponent(headerTeacher)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(fieldTeacher, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(11, 11, 11)
-                        .addComponent(headerBoard)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(headerBoard)
+                        .addGap(11, 11, 11)
                         .addComponent(fieldBoard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                        .addGap(51, 51, 51)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(runButton)
-                            .addComponent(update)
-                            .addComponent(saveButton)))
+                            .addComponent(update)))
                     .addComponent(jScrollPane2))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    static final String ELEMENT_CODE="Code";
-    static final String ELEMENT_DESC="Discription";
-    static final String ELEMENT_TEACH="Teacher";
-    static final String ELEMENT_BOARD="SchoolBoard";
+    static final String ELEMENT_BLOCK = "Block";
+   
+    static final String ELEMENT_DESC = "Discription";
+    static final String ELEMENT_TEACH = "Teacher";
+    static final String ELEMENT_BOARD = "SchoolBoard";
+    Element courses = new Element("Courses");
+    Document courseData = new Document(courses);
     private void runButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_runButtonActionPerformed
- 
-        Element course = new Element("Course");
-        Document courseData = new Document(course);
-        Element code = new Element(ELEMENT_CODE);
-        code.appendChild(fieldCode.getText());
+        
+        String elementCourse=fieldCourse.getText();
+        Element course=new Element(elementCourse);
+        Element block = new Element(ELEMENT_BLOCK);
+        block.appendChild(fieldBlock.getText());
         Element description = new Element(ELEMENT_DESC);
         description.appendChild(fieldDiscription.getText());
         Element teacher = new Element(ELEMENT_TEACH);
@@ -182,30 +195,40 @@ public class SchoolXMLGUI extends javax.swing.JFrame {
         Element schoolBoard = new Element(ELEMENT_BOARD);
         schoolBoard.appendChild(fieldBoard.getText());
         
-        course.appendChild(code);
+        courses.appendChild(course);
+        course.appendChild(block);
         course.appendChild(description);
         course.appendChild(teacher);
         course.appendChild(schoolBoard);
-        
+
         //Serializer
-                try {
+        try {
             Serializer serializer = new Serializer(System.out);
             serializer.setIndent(4);
             serializer.setMaxLength(64);
             serializer.write(courseData);
         } catch (IOException ex) {
             System.err.println(ex);
-            
+
         }
+        try {
+            BufferedWriter output = new BufferedWriter(new FileWriter("School.xml"));
+            output.write(courseData.toXML());
+            output.close();
+        } catch (IOException ex) {
+            System.out.println(ex);
+        }
+        fieldBlock.setText(" ");
+        fieldBoard.setText(" ");
+        fieldCourse.setText(" ");
+        fieldDiscription.setText(" ");
+        fieldTeacher.setText(" ");
+        
     }//GEN-LAST:event_runButtonActionPerformed
 
     private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_updateActionPerformed
-
-    private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_saveButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -243,12 +266,14 @@ public class SchoolXMLGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel courseLable;
+    private javax.swing.JTextField fieldBlock;
     private javax.swing.JTextField fieldBoard;
-    private javax.swing.JTextField fieldCode;
+    private javax.swing.JTextField fieldCourse;
     private javax.swing.JTextField fieldDiscription;
     private javax.swing.JTextField fieldTeacher;
+    private javax.swing.JLabel headerBlock;
     private javax.swing.JLabel headerBoard;
-    private javax.swing.JLabel headerCode;
     private javax.swing.JLabel headerDiscription;
     private javax.swing.JLabel headerTeacher;
     private javax.swing.JScrollPane jScrollPane1;
@@ -256,7 +281,6 @@ public class SchoolXMLGUI extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea output;
     private javax.swing.JButton runButton;
-    private javax.swing.JButton saveButton;
     private java.awt.Label tittle;
     private javax.swing.JButton update;
     // End of variables declaration//GEN-END:variables

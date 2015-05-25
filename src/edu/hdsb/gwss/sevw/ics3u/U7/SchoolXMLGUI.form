@@ -45,38 +45,54 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="tittle" alignment="0" min="-2" pref="215" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="headerDiscription" min="-2" max="-2" attributes="0"/>
-                                          <Component id="headerCode" min="-2" max="-2" attributes="0"/>
-                                          <Component id="headerTeacher" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="headerBoard" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
+                                                  <Component id="courseLable" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
+                                                  <Component id="headerBlock" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="1" attributes="0">
+                                                      <Component id="headerDiscription" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="headerTeacher" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                          <Component id="headerBoard" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Component id="fieldCode" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="fieldDiscription" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="fieldTeacher" max="32767" attributes="0"/>
-                                  <Component id="fieldBoard" alignment="1" min="-2" pref="215" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="runButton" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="update" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="fieldCourse" alignment="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="runButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="saveButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="update" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="fieldBlock" alignment="1" max="32767" attributes="0"/>
+                          <Component id="fieldDiscription" alignment="1" max="32767" attributes="0"/>
+                          <Component id="fieldTeacher" alignment="1" max="32767" attributes="0"/>
+                          <Component id="fieldBoard" alignment="1" max="32767" attributes="0"/>
                       </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -87,27 +103,30 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="tittle" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                      <Component id="courseLable" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="headerCode" min="-2" max="-2" attributes="0"/>
+                      <Component id="fieldCourse" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="29" max="32767" attributes="0"/>
+                      <Component id="headerBlock" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                      <Component id="fieldCode" min="-2" max="-2" attributes="0"/>
+                      <Component id="fieldBlock" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="headerDiscription" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="fieldDiscription" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="headerTeacher" min="-2" pref="16" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                      <Component id="headerTeacher" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="fieldTeacher" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                      <Component id="headerBoard" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
+                      <Component id="headerBoard" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                       <Component id="fieldBoard" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="runButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="update" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="saveButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Component id="jScrollPane2" max="32767" attributes="0"/>
@@ -126,9 +145,9 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="runButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="headerCode">
+    <Component class="javax.swing.JLabel" name="headerBlock">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Enter Code"/>
+        <Property name="text" type="java.lang.String" value="Enter Block"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="headerDiscription">
@@ -138,12 +157,12 @@
     </Component>
     <Component class="javax.swing.JLabel" name="headerTeacher">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Enter Name "/>
+        <Property name="text" type="java.lang.String" value="Enter Teacher Name "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="headerBoard">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Eneter Board"/>
+        <Property name="text" type="java.lang.String" value="Enter Board"/>
       </Properties>
     </Component>
     <Component class="java.awt.Label" name="tittle">
@@ -167,7 +186,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JTextField" name="fieldCode">
+    <Component class="javax.swing.JTextField" name="fieldBlock">
     </Component>
     <Component class="javax.swing.JTextField" name="fieldDiscription">
     </Component>
@@ -183,14 +202,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="updateActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="saveButton">
+    <Component class="javax.swing.JTextField" name="fieldCourse">
+    </Component>
+    <Component class="javax.swing.JLabel" name="courseLable">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Save(FUTURE UPDATE)"/>
-        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="text" type="java.lang.String" value="Enter Course"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saveButtonActionPerformed"/>
-      </Events>
     </Component>
   </SubComponents>
 </Form>
