@@ -1,6 +1,41 @@
+<goodMusic>
+    <genre>
+        <name>Rock</name>
+        <aritist>
+            <name>ACDC</name>
+            <albums>
+                <album>
+                    <name>Back in Black</name>
+                    <songs>
+                        <song>
+                            <name></name>
+                            <length></length>
+                        </song>
+                    </songs>
+                </album>
+            </albums>
+        </aritist>
+        <aritist>
+            <name>Metallica</name>
+            <albums>
+                <album>
+                    <name>One</name>
+                    <songs>
+                        <song>
+                            <name>fdsafdsafsd</name>
+                            <length>2</length>
+                        </song>
+                    </songs>
+                </album>
+            </albums>
+        </aritist>
+    </genre>
+</goodMusic>
+
 <Rock_And_Other_Good_Music>
-    <Rock>
-        <Queen>
+    <genre>
+        <name>rock</name>
+        <artist>
             <Im_Going_Slightly_Mad>
                 
             </Im_Going_Slightly_Mad>

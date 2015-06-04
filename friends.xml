@@ -23,4 +23,16 @@
        <phone>+33-287-4333-333</phone>
        <email>linuxlinus@linux.org</email>
     </friend>
+    <friend>
+       <name>Timothy Britton</name>
+       <address>123 Candyland</address>
+       <phone>+1 289 952 2834</phone>
+       <email>brittont@outlook.com</email>
+    </friend>
+    <friend>
+        <name>Caitlyn</name>
+        <address>Drewery Lane, with the Muffin Man</address>
+        <phone>Text me instead</phone>
+        <email>You know it, Sean.  Gosh</email>
+    </friend>
 </friends>

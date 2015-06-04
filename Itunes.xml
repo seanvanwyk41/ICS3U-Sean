@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<Genres>
+    <Genre>
+        <Name>Rock</Name>
+        <Artist>
+            <Name>Pink Floyd</Name>
+            <Album>
+                <Name>The Wall Disc 1</Name>
+                <Songs>
+                    <Song>
+                        <Plays>5</Plays>
+                        <Name>Anouther Brick in the Wall, Pt. 1</Name>
+                        <Length>5:20</Length>
+                        <Rating>4.0 Stars</Rating>
+                        <Track>Track Number4</Track>
+                    </Song>
+                </Songs>
+                <Songs>
+                    <Song>
+                        <Plays>12</Plays>
+                        <Name>Anouther Brick in The Wall, Pt. 2</Name>
+                        <Length>5:02</Length>
+                        <Rating>4.0 Stars</Rating>
+                        <Track>Track Number4</Track>
+                    </Song>
+                </Songs>
+                <Songs>
+                    <Song>
+                        <Plays>12</Plays>
+                        <Name>Anouther Brick in the Wall, Pt. 3</Name>
+                        <Length>3 :10</Length>
+                        <Rating>4.0 Stars</Rating>
+                        <Track>Track Number6</Track>
+                    </Song>
+                </Songs>
+            </Album>
+        </Artist>
+    </Genre>
+    <Genre>
+        <Name>Pop</Name>
+        <Artist>
+            <Name>Ed Sheeran</Name>
+            <Album>
+                <Name>2013 GRAMMY Nominies</Name>
+                <Songs>
+                    <Song>
+                        <Plays>41</Plays>
+                        <Name>The A Team</Name>
+                        <Length>Unknown</Length>
+                        <Rating>3.0 Stars</Rating>
+                        <Track>Track Number4</Track>
+                    </Song>
+                </Songs>
+            </Album>
+        </Artist>
+        <Artist>
+            <Name>Headly</Name>
+            <Album>
+                <Name>Wild Life</Name>
+                <Songs>
+                    <Song>
+                        <Plays>10</Plays>
+                        <Name>Anything</Name>
+                        <Length>4:35</Length>
+                        <Rating>4.0 Stars</Rating>
+                        <Track>Track Number6</Track>
+                    </Song>
+                </Songs>
+            </Album>
+        </Artist>
+    </Genre>
+    <Genre>
+        <Name>Clasical</Name>
+        <Artist>
+            <Name>Helmut Lotti</Name>
+            <Album>
+                <Name>Helmut Lotti Goes Classic, Vol. 1</Name>
+                <Songs>
+                    <Song>
+                        <Plays>5</Plays>
+                        <Name>Funiculi, Funicula</Name>
+                        <Length>3:20</Length>
+                        <Rating>2.0 Stars</Rating>
+                        <Track>Track Number8</Track>
+                    </Song>
+                </Songs>
+            </Album>
+        </Artist>
+    </Genre>
+    <Genre>
+        <Name>Country</Name>
+        <Artist>
+            <Name>Shania Twain</Name>
+            <Album>
+                <Name>Up! Disc 1</Name>
+                <Songs>
+                    <Song>
+                        <Plays>5</Plays>
+                        <Name>Up!</Name>
+                        <Length>2:54</Length>
+                        <Rating>1.0 Stars</Rating>
+                        <Track>Track Number1</Track>
+                    </Song>
+                </Songs>
+            </Album>
+        </Artist>
+    </Genre>
+    <Genre>
+        <Name>Techno</Name>
+        <Artist>
+            <Name>Skrillex</Name>
+            <Album>
+                <Name>Bangarang</Name>
+                <Songs>
+                    <Song>
+                        <Plays>3</Plays>
+                        <Name>Bangarang</Name>
+                        <Length>3:36</Length>
+                        <Rating>2.0 Stars</Rating>
+                        <Track>Track Number2</Track>
+                    </Song>
+                </Songs>
+            </Album>
+        </Artist>
+    </Genre>
+    <Genre>
+        <Name>Other</Name>
+        <Artist>
+            <Name>"Wierd Al" Yankovic</Name>
+            <Album>
+                <Name>Apocalyps (Deluxe Version)</Name>
+                <Songs>
+                    <Song>
+                        <Plays>6</Plays>
+                        <Name>Polka Face</Name>
+                        <Length>4:48</Length>
+                        <Rating>4.0 Stars</Rating>
+                        <Track>Track Number5</Track>
+                    </Song>
+                </Songs>
+            </Album>
+        </Artist>
+    </Genre>
+</Genres>

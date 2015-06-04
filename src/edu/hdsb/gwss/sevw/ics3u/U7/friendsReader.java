@@ -4,22 +4,21 @@
  * Version: v1
  * Author: Sean van Wyk
  * Description: Program to write data in a XML Format
-import nu.xom.Serializer;
+ import nu.xom.Serializer;
 
  */
 package edu.hdsb.gwss.sevw.ics3u.U7;
 
-import java.io.BufferedWriter;
+import edu.hdsb.gwss.sevw.ics3u.Libraries.ArrayTools;
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
 import nu.xom.Builder;
 
 import nu.xom.Document;
 import nu.xom.Element;
 import nu.xom.Elements;
+
 /**
  *
  * @author Sean
@@ -47,10 +46,14 @@ public class friendsReader extends javax.swing.JFrame {
         header = new javax.swing.JLabel();
         importButon = new javax.swing.JButton();
         friendsList = new javax.swing.JComboBox();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        nameHeader = new javax.swing.JLabel();
+        addressHeader = new javax.swing.JLabel();
+        phoneHeader = new javax.swing.JLabel();
+        emailHeader = new javax.swing.JLabel();
+        namePrint = new javax.swing.JLabel();
+        addressPrint = new javax.swing.JLabel();
+        phonePrint = new javax.swing.JLabel();
+        emailPrint = new javax.swing.JLabel();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -69,15 +72,19 @@ public class friendsReader extends javax.swing.JFrame {
             }
         });
 
-        friendsList.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        friendsList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                friendsListActionPerformed(evt);
+            }
+        });
 
-        jLabel1.setText("jLabel1");
+        nameHeader.setText("Name:");
 
-        jLabel2.setText("jLabel2");
+        addressHeader.setText("Address:");
 
-        jLabel3.setText("jLabel3");
+        phoneHeader.setText("Phone:");
 
-        jLabel4.setText("jLabel4");
+        emailHeader.setText("Email:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -95,11 +102,15 @@ public class friendsReader extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(94, 94, 94)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
+                            .addComponent(nameHeader)
                             .addComponent(friendsList, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))))
+                            .addComponent(addressHeader)
+                            .addComponent(phoneHeader)
+                            .addComponent(emailHeader)
+                            .addComponent(namePrint)
+                            .addComponent(phonePrint)
+                            .addComponent(emailPrint)
+                            .addComponent(addressPrint))))
                 .addContainerGap(73, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -111,24 +122,75 @@ public class friendsReader extends javax.swing.JFrame {
                 .addComponent(importButon)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(friendsList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(jLabel1)
-                .addGap(30, 30, 30)
-                .addComponent(jLabel2)
-                .addGap(30, 30, 30)
-                .addComponent(jLabel3)
-                .addGap(37, 37, 37)
-                .addComponent(jLabel4)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(nameHeader)
+                .addGap(7, 7, 7)
+                .addComponent(namePrint)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(addressHeader)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(addressPrint)
+                .addGap(11, 11, 11)
+                .addComponent(phoneHeader)
+                .addGap(13, 13, 13)
+                .addComponent(phonePrint)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(emailHeader)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(emailPrint, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(77, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    File file = new File("friends.xml");
+    Builder builder = new Builder();
+    String[] list;
+    Document doc;
+    Element friends;
+    Elements friend;
     private void importButonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_importButonActionPerformed
-        // TODO add your handling code here:
+        try {
+            doc = builder.build(file);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        friends = doc.getRootElement();
+        friend = friends.getChildElements();
+        
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        list = new String[friend.size()];
+        for (int i = 0; friend.size() > i; i++) {
+            model.addElement(friend.get(i).getFirstChildElement("name").getValue());
+            list[i]=friend.get(i).getFirstChildElement("name").getValue();
+
+        }
+        friendsList.setModel(model);
+        namePrint.setText(friend.get(0).getFirstChildElement("name").getValue());
+        addressPrint.setText(friend.get(0).getFirstChildElement("address").getValue());
+        phonePrint.setText(friend.get(0).getFirstChildElement("phone").getValue());
+        emailPrint.setText(friend.get(0).getFirstChildElement("email").getValue());
+
     }//GEN-LAST:event_importButonActionPerformed
-    
+
+    private void friendsListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_friendsListActionPerformed
+        JComboBox friendList = (JComboBox) evt.getSource();
+        String friendName = (String) friendList.getSelectedItem();
+        int index=0;
+        
+        for (int i = 0; index == 0 && i < list.length; i++) {
+            if (list[i].equals(friendName)) {
+                index= i;
+            }
+        }
+
+        namePrint.setText(friend.get(index).getFirstChildElement("name").getValue());
+        addressPrint.setText(friend.get(index).getFirstChildElement("address").getValue());
+        phonePrint.setText(friend.get(index).getFirstChildElement("phone").getValue());
+        emailPrint.setText(friend.get(index).getFirstChildElement("email").getValue());
+
+    }//GEN-LAST:event_friendsListActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -159,20 +221,24 @@ public class friendsReader extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SchoolXMLGUI().setVisible(true);
+                new friendsReader().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel addressHeader;
+    private javax.swing.JLabel addressPrint;
+    private javax.swing.JLabel emailHeader;
+    private javax.swing.JLabel emailPrint;
     private javax.swing.JComboBox friendsList;
     private javax.swing.JLabel header;
     private javax.swing.JButton importButon;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel nameHeader;
+    private javax.swing.JLabel namePrint;
+    private javax.swing.JLabel phoneHeader;
+    private javax.swing.JLabel phonePrint;
     // End of variables declaration//GEN-END:variables
 }

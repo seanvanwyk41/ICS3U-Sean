@@ -156,6 +156,19 @@ public class ArrayTools {
 
         return y;
     }
+    
+    public static int linearSearch(String[] x, String search) {
+        //initialize
+        int y = -1;
+
+        for (int i = 0; y == -1 && i<x.length; i++) {
+            if (x[i].equals(search)) {
+                y = i;
+            }
+        }
+
+        return y;
+    }
 
     //binary Search
     public static int[] binarySearch(int[] x, int search) {
