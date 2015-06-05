@@ -8,9 +8,7 @@
 package edu.hdsb.gwss.sevw.ics3u.U7;
 
 import java.io.File;
-import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
-import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import nu.xom.Builder;
 import nu.xom.Document;

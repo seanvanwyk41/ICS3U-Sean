@@ -390,7 +390,7 @@ public class ItunesWriter extends javax.swing.JFrame {
         songName.appendChild(fieldSongName.getText());
         songLength.appendChild(fieldLength.getText());
         songRatings.appendChild("" + (double)sliderRatings.getValue() + " Stars");
-        songTrack.appendChild("Track Number " + spinnerTrack.getValue());
+        songTrack.appendChild("Track Number: " + spinnerTrack.getValue());
         song.appendChild(songPlays);
         song.appendChild(songName);
         song.appendChild(songLength);
@@ -418,9 +418,9 @@ public class ItunesWriter extends javax.swing.JFrame {
         }
         fieldSongName.setText("");
         fieldPlays.setText("");
-        fieldArtist.setText("");
+       
         fieldLength.setText("");
-        fieldAlbumName.setText("");
+        
 
 
     }//GEN-LAST:event_runButtonActionPerformed
