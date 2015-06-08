@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<Questions>
+    <Question>
+        <number>1</number>
+        <Asks>The constant use of a keyboard can lead to which injury the muscles and tendons.</Asks>
+        <choices>
+            <a>Split Shin.</a>
+            <b> Repetitive muscle strain.</b>
+            <c> Wrist sprain.</c>
+            <d>Torn Tendon.</d>
+        </choices>
+        <Answer>b</Answer>
+    </Question>
+    <Question>
+        <number>2</number>
+        <Asks>How far away should your computer monitor be away from your.</Asks>
+        <choices>
+            <a>2 inches-5Inches.</a>
+            <b>6-15 Inches.</b>
+            <c>18-30Inces.</c>
+            <d>it is personal preference.</d>
+        </choices>
+        <Answer>c</Answer>
+    </Question>
+    <Question>
+        <number>3</number>
+        <Asks>Where is the majority of all e-waste sent.</Asks>
+        <choices>
+            <a>.Bangladesh.</a>
+            <b>Indonesia.</b>
+            <c>Mexico</c>
+            <d>China</d>
+        </choices>
+        <Answer>d</Answer>
+    </Question>
+    <Question>
+        <number>4</number>
+        <Asks>Which of the following is NOT a naming convention.</Asks>
+        <choices>
+            <a>Common file Types should be kept in the same folder.</a>
+            <b>Camel naming.</b>
+            <c>When giving a file a number always include 2 digits (01-99).</c>
+            <d>the file version should always be after a capital "V".</d>
+        </choices>
+        <Answer>a</Answer>
+    </Question>
+    <Question>
+        <number>5</number>
+        <Asks>What is malware.</Asks>
+        <choices>
+            <a>A fluffy animal.</a>
+            <b>A term for a common compiling error.</b>
+            <c>Malicious software.</c>
+            <d>The name of a virus.</d>
+        </choices>
+        <Answer>c</Answer>
+    </Question>
+    <Question>
+        <number>6</number>
+        <Asks>What is 110100100 in decimal.</Asks>
+        <choices>
+            <a>420</a>
+            <b>212</b>
+            <c>422</c>
+            <d>292</d>
+        </choices>
+        <Answer>a</Answer>
+    </Question>
+    <Question>
+        <number>7</number>
+        <Asks>What is Java virtual machine</Asks>
+        <choices>
+            <a>It is a fun software used to develop Minecraft</a>
+            <b>Allows for code to be written and executed regardless of O.S.</b>
+            <c>A Virtual Coffee Machine</c>
+            <d>Something used to scan a computer for viruses</d>
+        </choices>
+        <Answer>b</Answer>
+    </Question>
+    <Question>
+        <number>8</number>
+        <Asks>Which of the following is not a comment Indecator</Asks>
+        <choices>
+            <a>/**</a>
+            <b>//**</b>
+            <c>//</c>
+            <d>/*</d>
+        </choices>b
+        <Answer></Answer>
+    </Question>
+    <Question>
+        <number>9</number>
+        <Asks>What class is used to import data into java</Asks>
+        <choices>
+            <a>.Abra Kadabra Alakazam.</a>
+            <b>in.</b>
+            <c>System.</c>
+            <d>Scanner.</d>
+        </choices>
+        <Answer>d</Answer>
+    </Question>
+    <Question>
+        <number>10</number>
+        <Asks>Which of the following is the correct If syntax</Asks>
+        <choices>
+            <a>if(True){</a>
+            <b>if True {</b>
+            <c>if (True):</c>
+            <d>if {True};</d>
+        </choices>
+        <Answer>a</Answer>
+    </Question>
+    <Question>
+        <number>11</number>
+        <Asks>Which of the following is a correct loop format</Asks>
+        <choices>
+            <a>for (int i;i<4;i++){</a>
+            <b>do{......}while(True);</b>
+            <c>{while(True);</c>
+            <d>doALoop(True){</d>
+        </choices>
+        <Answer>b</Answer>
+    </Question>
+    <Question>
+        <number>12</number>
+        <Asks>What is the correct Switch case syntax</Asks>
+        <choices>
+            <a>switch(){....case 1;</a>
+            <b>switch(){....case1:</b>
+            <c>Switch(){....case 1:</c>
+            <d>switch(){....case 1:</d>
+        </choices>
+        <Answer>d</Answer>
+    </Question>
+    <Question>
+        <number>13</number>
+        <Asks>How do you declare a global variable</Asks>
+        <choices>
+            <a>type Global in front</a>
+            <b>Declare it outside a method</b>
+            <c>Type aroundTheWorld in frount of it</c>
+            <d>Declare it after "//"</d>
+        </choices>
+        <Answer>b</Answer>
+    </Question>
+    <Question>
+        <number>14</number>
+        <Asks>How do you declare a method that returns a number without a decimal point</Asks>
+        <choices>
+            <a>Public static int methodName(){</a>
+            <b>Public static double methodName(){</b>
+            <c>int methodName(){</c>
+            <d>Public static number methodName(){</d>
+        </choices>
+        <Answer></Answer>
+    </Question>
+    <Question>
+        <number>15</number>
+        <Asks>What is an array</Asks>
+        <choices>
+            <a>Stores multiple values in one variable</a>
+            <b>is a satelite dish</b>
+            <c>a group of classes</c>
+            <d>group of objects</d>
+        </choices>
+        <Answer>a</Answer>
+    </Question>
+    <Question>
+        <number>16</number>
+        <Asks>what does bubble sort do</Asks>
+        <choices>
+            <a>blows bubbles out of the fan exhast</a>
+            <b>sorts using binary code</b>
+            <c>shorts a file by swapping values by using an if statment that states if(v1(<or>)v2)</c>
+            <d>outputs data</d>
+        </choices>
+        <Answer>c</Answer>
+    </Question>
+    <Question>
+        <number>17</number>
+        <Asks>what does arrya.lengthPrint</Asks>
+        <choices>
+            <a>The length of the indecies</a>
+            <b>length of the longest index</b>
+            <c>lenght of the word array</c>
+            <d>6</d>
+        </choices>
+        <Answer>a</Answer>
+    </Question>
+    <Question>
+        <number>18</number>
+        <Asks>what is an XML</Asks>
+        <choices>
+            <a>a file type</a>
+            <b>A cult</b>
+            <c>a sports team</c>
+            <d>a class</d>
+        </choices>
+        <Answer>a</Answer>
+    </Question>
+    <Question>
+        <number>19</number>
+        <Asks>what libray needs to be imported for an xml to be read</Asks>
+        <choices>
+            <a>array helper</a>
+            <b>library</b>
+            <c>read</c>
+            <d>som</d>
+        </choices>
+        <Answer>d</Answer>
+    </Question>
+
+    
+    
+</Questions>
