@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-
-
 <Questions>
     <Question>
         <number>1</number>
@@ -33,7 +26,7 @@ and open the template in the editor.
         <number>3</number>
         <Asks>Where is the majority of all e-waste sent.</Asks>
         <choices>
-            <a>.Bangladesh.</a>
+            <a>Bangladesh.</a>
             <b>Indonesia.</b>
             <c>Mexico</c>
             <d>China</d>
@@ -66,10 +59,10 @@ and open the template in the editor.
         <number>6</number>
         <Asks>What is 110100100 in decimal.</Asks>
         <choices>
-            <a>420</a>
-            <b>212</b>
-            <c>422</c>
-            <d>292</d>
+            <a>420.</a>
+            <b>212.</b>
+            <c>422.</c>
+            <d>292.</d>
         </choices>
         <Answer>a</Answer>
     </Question>
@@ -99,7 +92,7 @@ and open the template in the editor.
         <number>9</number>
         <Asks>What class is used to import data into java</Asks>
         <choices>
-            <a>.Abra Kadabra Alakazam.</a>
+            <a>Abra Kadabra Alakazam.</a>
             <b>in.</b>
             <c>System.</c>
             <d>Scanner.</d>
@@ -108,7 +101,7 @@ and open the template in the editor.
     </Question>
     <Question>
         <number>10</number>
-        <Asks>Which of the following is the correct If syntax</Asks>
+        <Asks>Which of the following is the correct If syntax.</Asks>
         <choices>
             <a>if(True){</a>
             <b>if True {</b>
@@ -119,7 +112,7 @@ and open the template in the editor.
     </Question>
     <Question>
         <number>11</number>
-        <Asks>Which of the following is a correct loop format</Asks>
+        <Asks>Which of the following is a correct loop format.</Asks>
         <choices>
             <a>for (int i;i<4;i++){</a>
             <b>do{......}while(True);</b>
@@ -130,7 +123,7 @@ and open the template in the editor.
     </Question>
     <Question>
         <number>12</number>
-        <Asks>What is the correct Switch case syntax</Asks>
+        <Asks>What is the correct Switch case syntax.</Asks>
         <choices>
             <a>switch(){....case 1;</a>
             <b>switch(){....case1:</b>
@@ -141,7 +134,7 @@ and open the template in the editor.
     </Question>
     <Question>
         <number>13</number>
-        <Asks>How do you declare a global variable</Asks>
+        <Asks>How do you declare a global variable.</Asks>
         <choices>
             <a>type Global in front</a>
             <b>Declare it outside a method</b>
@@ -152,14 +145,14 @@ and open the template in the editor.
     </Question>
     <Question>
         <number>14</number>
-        <Asks>How do you declare a method that returns a number without a decimal point</Asks>
+        <Asks>How do you declare a method that returns a number without a decimal point.</Asks>
         <choices>
             <a>Public static int methodName(){</a>
             <b>Public static double methodName(){</b>
             <c>int methodName(){</c>
             <d>Public static number methodName(){</d>
         </choices>
-        <Answer></Answer>
+        <Answer>a</Answer>
     </Question>
     <Question>
         <number>15</number>
@@ -185,7 +178,7 @@ and open the template in the editor.
     </Question>
     <Question>
         <number>17</number>
-        <Asks>what does arrya.lengthPrint</Asks>
+        <Asks>what does arrya.length return</Asks>
         <choices>
             <a>The length of the indecies</a>
             <b>length of the longest index</b>
@@ -212,11 +205,8 @@ and open the template in the editor.
             <a>array helper</a>
             <b>library</b>
             <c>read</c>
-            <d>som</d>
+            <d>xom</d>
         </choices>
         <Answer>d</Answer>
     </Question>
-
-    
-    
 </Questions>
