@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="multipleCoiceAnswers">
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="progressQuiz" min="-2" pref="409" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="labelScore" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+                              <Component id="lableScoreNum" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="labelAskQuestion" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="buttonSubmit" min="-2" pref="128" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="labelResults" min="-2" pref="181" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lableCompleted" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="labelCompletedNum" min="-2" pref="18" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="0" pref="11" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="buttonD" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="labelDOption" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="buttonC" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="labelCOption" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="buttonA" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="buttonB" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelAOption" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelBOption" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                      <Component id="labelQuestion" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="lableQNumber" min="-2" pref="40" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="buttonEnd" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="183" max="-2" attributes="0"/>
+              <Component id="labelProgressbar" min="-2" pref="84" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="labelQuestion" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
+                  <Component id="lableQNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonEnd" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+              <Component id="labelAskQuestion" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="buttonA" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelAOption" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="labelBOption" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonB" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="buttonC" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelCOption" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="buttonD" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelDOption" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="buttonSubmit" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelResults" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="labelScore" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lableScoreNum" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lableCompleted" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelCompletedNum" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="labelProgressbar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="progressQuiz" min="-2" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JRadioButton" name="buttonA">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="a."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="buttonB">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="b."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="buttonC">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="c."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="buttonD">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="d."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelAOption">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Qa"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelBOption">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Qb"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelCOption">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Qc"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelDOption">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Qd"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelQuestion">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Question Number:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lableQNumber">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="buttonSubmit">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Submit"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelScore">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Score"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lableCompleted">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Questions completed"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lableScoreNum">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelCompletedNum">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JProgressBar" name="progressQuiz">
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelAskQuestion">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Question Text"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelResults">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="result"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelProgressbar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Progress"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="buttonEnd">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="End"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonEndActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
