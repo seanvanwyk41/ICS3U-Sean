@@ -1,7 +1,7 @@
 /*
  * Name: QuizResults
  * Date: 10-06-2015 (DD-MM-YYYY)
- * Version: v0.2
+ * Version: v0.3
  * Author: Sean van Wyk
  * Description: Program to display quiz results
  */
@@ -135,7 +135,7 @@ public class QuizResultsSean extends javax.swing.JFrame {
                 .addComponent(labelMessage)
                 .addGap(18, 18, 18)
                 .addComponent(labelEndMessage)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         pack();

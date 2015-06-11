@@ -1,7 +1,7 @@
 /*
  * Name: Quiz
  * Date: 10-06-2015 (DD-MM-YYYY)
- * Version: v0.2
+ * Version: v0.3
  * Author: Sean van Wyk
  * Description: Program to run a quiz to test the user
  */
