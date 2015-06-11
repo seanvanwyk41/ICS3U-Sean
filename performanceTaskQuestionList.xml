@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Questions>
+
+<questions>
     <Question>
         <number>1</number>
         <Asks>The constant use of a keyboard can lead to which injury the muscles and tendons.</Asks>
@@ -86,7 +86,7 @@
             <c>//</c>
             <d>/*</d>
         </choices>b
-        <Answer></Answer>
+        <Answer>b</Answer>
     </Question>
     <Question>
         <number>9</number>
@@ -114,7 +114,7 @@
         <number>11</number>
         <Asks>Which of the following is a correct loop format.</Asks>
         <choices>
-            <a>for (int i;i<4;i++){</a>
+            <a>for (int i;i&lt;4;i++){</a>
             <b>do{......}while(True);</b>
             <c>{while(True);</c>
             <d>doALoop(True){</d>
@@ -171,7 +171,7 @@
         <choices>
             <a>blows bubbles out of the fan exhast</a>
             <b>sorts using binary code</b>
-            <c>shorts a file by swapping values by using an if statment that states if(v1(<or>)v2)</c>
+            <c>shorts a file by swapping values by using an if statment that states if(v1(or)v2)</c>
             <d>outputs data</d>
         </choices>
         <Answer>c</Answer>
@@ -209,4 +209,4 @@
         </choices>
         <Answer>d</Answer>
     </Question>
-</Questions>
+</questions>

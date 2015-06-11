@@ -8,9 +8,14 @@
 package edu.hdsb.gwss.sevw.ics3u.PerformanceTask;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import nu.xom.Builder;
 import nu.xom.Document;
 import nu.xom.Element;
+import nu.xom.Elements;
 
 /**
  *
@@ -21,9 +26,61 @@ public class QuizSean extends javax.swing.JFrame {
     /**
      * Creates new form Quiz
      */
-    int score=1;
+    //variables
+    int questionNum=10;
+    int score = 1;
+    
+    //Initializing Objects
+    File file = new File("performanceTaskQuestionList.xml");
+    Builder builder = new Builder();
+    Document doc = null;
+    Element questions;
+    
+    //Create new array list for questions order
+    List<Integer> questionList = new ArrayList();
+
     public QuizSean() {
+
         initComponents();
+
+        //File Builder
+        try {
+            doc = builder.build(file);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        //Getting Elements of the file
+        questions = doc.getRootElement();
+
+        //populate question List 
+        for (int i = 0; i < questions.getChildElements().size(); i++) {
+            questionList.add(i);
+        }
+
+        //randomise questions list
+        Collections.shuffle(questionList);
+
+        //Loop for first 10 values in a randomized list
+        for (int i = 0; i < questionNum; i++) {
+
+            //create element location shortcuts
+            Element questionLoc = questions.getChildElements().get(questionList.get(i));
+            Element choicesLoc = questionLoc.getFirstChildElement("choices");
+
+            //output Question Values
+            System.out.println("Question " + (i + 1));
+            System.out.println(questionLoc.getFirstChildElement("number").getValue());
+            System.out.println(questionLoc.getFirstChildElement("Asks").getValue());
+            System.out.println(questionLoc.getFirstChildElement("Answer").getValue());
+            System.out.println("a. " + choicesLoc.getFirstChildElement("a").getValue());
+            System.out.println("b. " + choicesLoc.getFirstChildElement("b").getValue());
+            System.out.println("c. " + choicesLoc.getFirstChildElement("c").getValue());
+            System.out.println("d. " + choicesLoc.getFirstChildElement("d").getValue());
+            System.out.println("---------------------------------");
+
+        }
+
     }
 
     /**
@@ -205,7 +262,7 @@ public class QuizSean extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonEndActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEndActionPerformed
-       
+
         new QuizResultsSean(score).setVisible(true);
         this.setVisible(false);
         this.dispose();
