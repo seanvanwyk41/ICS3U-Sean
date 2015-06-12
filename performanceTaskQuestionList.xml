@@ -59,10 +59,10 @@
         <number>6</number>
         <Asks>What is 110100100 in decimal.</Asks>
         <choices>
-            <a>420.</a>
-            <b>212.</b>
-            <c>422.</c>
-            <d>292.</d>
+            <a>420</a>
+            <b>212</b>
+            <c>422</c>
+            <d>1A4</d>
         </choices>
         <Answer>a</Answer>
     </Question>
@@ -171,16 +171,16 @@
         <choices>
             <a>blows bubbles out of the fan exhast</a>
             <b>sorts using binary code</b>
-            <c>shorts a file by swapping values by using an if statment that states if(v1(or)v2)</c>
+            <c>sorts a file by swapping values by using an if statment that states if(v1(or)v2)</c>
             <d>outputs data</d>
         </choices>
         <Answer>c</Answer>
     </Question>
     <Question>
         <number>17</number>
-        <Asks>what does arrya.length return</Asks>
+        <Asks>what does arrayName.length return</Asks>
         <choices>
-            <a>The length of the indecies</a>
+            <a>The number of Indecies</a>
             <b>length of the longest index</b>
             <c>lenght of the word array</c>
             <d>6</d>

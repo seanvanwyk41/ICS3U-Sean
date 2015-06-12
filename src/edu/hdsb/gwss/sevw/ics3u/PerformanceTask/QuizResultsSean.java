@@ -1,7 +1,7 @@
 /*
  * Name: QuizResults
  * Date: 10-06-2015 (DD-MM-YYYY)
- * Version: v0.3
+ * Version: v1
  * Author: Sean van Wyk
  * Description: Program to display quiz results
  */
@@ -18,10 +18,49 @@ public class QuizResultsSean extends javax.swing.JFrame {
     /**
      * Creates new form QuizResults
      */
-    public QuizResultsSean( int score ) {
-       
-        initComponents(); 
-        labelNumerator.setText(""+score);
+    public QuizResultsSean(int score) {
+        
+        initComponents();
+        labelNumerator.setText("" + score);
+        if (score < 10) {
+            labelPercentValue.setText("" + score + "0");
+        } else {
+            labelPercentValue.setText("10");
+        }
+        switch (score) {
+            case 0:
+                break;
+            case 1:
+                labelMessage.setText("Seriously! apply yourself.");
+                break;
+            case 2:
+                labelMessage.setText("Apply for a job at McDonalds at IFailedComputerScience.ca.");
+                break;
+            case 3:
+                labelMessage.setText("How many students does it take to complete a quiz. 3 apparently");
+                break;
+            case 4:
+                labelMessage.setText("Almost to nearly kind of acceptable, Try harder");
+                break;
+            case 5:
+                labelMessage.setText("Just made it, Lucky Bastard.");
+                break;
+            case 6:
+                labelMessage.setText("I don't anything interesting to say this mark is nothing special");
+                break;
+            case 7:
+                labelMessage.setText("You are 100% average");
+                break;
+            case 8:
+                labelMessage.setText("You are 60% average.");
+                break;
+            case 9:
+                labelMessage.setText("Well done, you got 9 multiple choice questions rigth, yay.");
+                break;
+            case 10:
+                labelMessage.setText("ShowOff!");
+                break;
+        }
     }
     
     private QuizResultsSean() {
@@ -54,25 +93,35 @@ public class QuizResultsSean extends javax.swing.JFrame {
         labelResults.setFont(new java.awt.Font("sansserif", 0, 36)); // NOI18N
         labelResults.setText("Results Page");
 
+        labelScoreHeader.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelScoreHeader.setText("Final Score");
 
+        labelNumerator.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelNumerator.setText("0");
 
+        labelOutOf.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelOutOf.setText(" out of a possible");
 
+        labelDenom.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelDenom.setText("10");
         labelDenom.setToolTipText("");
 
+        labelMarks.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelMarks.setText("marks.");
 
+        labelMessage.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelMessage.setText("If this is the mark you recieve this file must be broken");
 
+        labelPercentageTitle.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelPercentageTitle.setText("Percentage");
 
+        labelPercentValue.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelPercentValue.setText("00");
 
+        labelPercentSign.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelPercentSign.setText("%");
 
+        labelEndMessage.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelEndMessage.setText("Thank you for testing enjoy the cake, it is not a lie, I promise.[o]");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -91,28 +140,26 @@ public class QuizResultsSean extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(labelScoreHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(labelNumerator))
-                                    .addGroup(layout.createSequentialGroup()
                                         .addComponent(labelPercentageTitle)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(labelPercentValue)))
+                                        .addComponent(labelPercentValue))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(labelScoreHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(labelNumerator)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(12, 12, 12)
                                         .addComponent(labelOutOf)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(labelDenom)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(labelMarks))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(labelPercentSign))))))
+                                    .addComponent(labelPercentSign)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addComponent(labelEndMessage)))
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(275, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

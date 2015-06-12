@@ -1,7 +1,7 @@
 /*
  * Name: Quiz
  * Date: 12-06-2015 (DD-MM-YYYY)
- * Version: v0.4
+ * Version: v1
  * Author: Sean van Wyk
  * Description: Program to run a quiz to test the user
  */
@@ -27,15 +27,17 @@ public class QuizSean extends javax.swing.JFrame {
      * Creates new form Quiz
      */
     //variables
-    int questionNum=10;
-    int score = 1;
-    
+    int questionTotal = 10;
+    int score = 0;
+    boolean answered = false;
+    int questionNum = 0;
+
     //Initializing Objects
     File file = new File("performanceTaskQuestionList.xml");
     Builder builder = new Builder();
     Document doc = null;
     Element questions;
-    
+
     //Create new array list for questions order
     List<Integer> questionList = new ArrayList();
 
@@ -60,29 +62,9 @@ public class QuizSean extends javax.swing.JFrame {
 
         //randomise questions list
         Collections.shuffle(questionList);
-        
-        //Set start button
-        buttonSubmit.setText("Start");
 
-//        Loop for first 10 values in a randomized list
-//        for (int i = 0; i < questionNum; i++) {
-//
-//            create element location shortcuts
-//            Element questionLoc = questions.getChildElements().get(questionList.get(i));
-//            Element choicesLoc = questionLoc.getFirstChildElement("choices");
-//
-//            output Question Values
-//            System.out.println("Question " + (i + 1));
-//            System.out.println(questionLoc.getFirstChildElement("number").getValue());
-//            System.out.println(questionLoc.getFirstChildElement("Asks").getValue());
-//            System.out.println(questionLoc.getFirstChildElement("Answer").getValue());
-//            System.out.println("a. " + choicesLoc.getFirstChildElement("a").getValue());
-//            System.out.println("b. " + choicesLoc.getFirstChildElement("b").getValue());
-//            System.out.println("c. " + choicesLoc.getFirstChildElement("c").getValue());
-//            System.out.println("d. " + choicesLoc.getFirstChildElement("d").getValue());
-//            System.out.println("---------------------------------");
-
-        }
+        //first button press
+        this.buttonSubmitActionPerformed(null);
 
     }
 
@@ -108,53 +90,63 @@ public class QuizSean extends javax.swing.JFrame {
         lableQNumber = new javax.swing.JLabel();
         buttonSubmit = new javax.swing.JButton();
         labelScore = new javax.swing.JLabel();
-        lableCompleted = new javax.swing.JLabel();
         lableScoreNum = new javax.swing.JLabel();
-        labelCompletedNum = new javax.swing.JLabel();
-        progressQuiz = new javax.swing.JProgressBar();
         labelAskQuestion = new javax.swing.JLabel();
         labelResults = new javax.swing.JLabel();
-        labelProgressbar = new javax.swing.JLabel();
         buttonEnd = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 204, 0));
 
+        multipleCoiceAnswers.add(buttonA);
+        buttonA.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         buttonA.setText("a.");
 
+        multipleCoiceAnswers.add(buttonB);
+        buttonB.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         buttonB.setText("b.");
 
+        multipleCoiceAnswers.add(buttonC);
+        buttonC.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         buttonC.setText("c.");
 
+        multipleCoiceAnswers.add(buttonD);
+        buttonD.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         buttonD.setText("d.");
 
+        labelAOption.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelAOption.setText("Qa");
 
+        labelBOption.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelBOption.setText("Qb");
 
+        labelCOption.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelCOption.setText("Qc");
 
+        labelDOption.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelDOption.setText("Qd");
 
         labelQuestion.setText("Question Number:");
 
         lableQNumber.setText("0");
 
+        buttonSubmit.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         buttonSubmit.setText("Submit");
+        buttonSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonSubmitActionPerformed(evt);
+            }
+        });
 
         labelScore.setText("Score");
 
-        lableCompleted.setText("Questions completed");
-
         lableScoreNum.setText("0");
 
-        labelCompletedNum.setText("0");
-        labelCompletedNum.setToolTipText("");
-
+        labelAskQuestion.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelAskQuestion.setText("Question Text");
 
+        labelResults.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelResults.setText("result");
-
-        labelProgressbar.setText("Progress");
 
         buttonEnd.setText("End");
         buttonEnd.addActionListener(new java.awt.event.ActionListener() {
@@ -170,25 +162,10 @@ public class QuizSean extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelResults, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(progressQuiz, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(labelScore, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(95, 95, 95)
-                                .addComponent(lableScoreNum))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(labelAskQuestion)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(buttonSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(labelResults, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lableCompleted)
-                                .addGap(18, 18, 18)
-                                .addComponent(labelCompletedNum, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 11, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(buttonD)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -204,28 +181,37 @@ public class QuizSean extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(labelAOption)
-                                    .addComponent(labelBOption))))
-                        .addGap(71, 71, 71)
-                        .addComponent(labelQuestion)
-                        .addGap(18, 18, 18)
-                        .addComponent(lableQNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(buttonEnd)
-                        .addGap(25, 25, 25))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(183, 183, 183)
-                .addComponent(labelProgressbar, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(labelBOption)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelQuestion)
+                                    .addComponent(labelScore, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(12, 12, 12)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lableScoreNum)
+                                    .addComponent(lableQNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(buttonEnd))
+                            .addComponent(buttonSubmit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(343, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelQuestion, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lableQNumber)
-                    .addComponent(buttonEnd))
-                .addGap(5, 5, 5)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(buttonEnd)
+                        .addGap(33, 33, 33))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(labelScore)
+                            .addComponent(lableScoreNum))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(labelQuestion, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lableQNumber))
+                        .addGap(18, 18, 18)))
                 .addComponent(labelAskQuestion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -244,21 +230,10 @@ public class QuizSean extends javax.swing.JFrame {
                     .addComponent(buttonD)
                     .addComponent(labelDOption))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(buttonSubmit)
-                    .addComponent(labelResults))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelScore)
-                    .addComponent(lableScoreNum))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lableCompleted)
-                    .addComponent(labelCompletedNum))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(labelProgressbar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(progressQuiz, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(buttonSubmit)
+                .addGap(40, 40, 40)
+                .addComponent(labelResults)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -270,6 +245,67 @@ public class QuizSean extends javax.swing.JFrame {
         this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_buttonEndActionPerformed
+
+    private void buttonSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSubmitActionPerformed
+        Element questionLoc = questions.getChildElements().get((int) questionList.get(questionNum));
+        Element choicesLoc = questionLoc.getFirstChildElement("choices");
+        String answer = questionLoc.getFirstChildElement("Answer").getValue();
+        String question = questionLoc.getFirstChildElement("Asks").getValue();
+        String a = choicesLoc.getFirstChildElement("a").getValue();
+        String b = choicesLoc.getFirstChildElement("b").getValue();
+        String c = choicesLoc.getFirstChildElement("c").getValue();
+        String d = choicesLoc.getFirstChildElement("d").getValue();
+        String result;
+        String chosen;
+
+        if (answered) {
+            buttonSubmit.setText("Next Question");
+            if (buttonA.isSelected()) {
+                chosen = "a";
+            } else if (buttonB.isSelected()) {
+                chosen = "b";
+            } else if (buttonC.isSelected()) {
+                chosen = "c";
+            } else if (buttonD.isSelected()) {
+                chosen = "d";
+            } else {
+                chosen = "wrong";
+            }
+
+            if (chosen.equals(answer)) {
+                
+                //is correct
+                result = "Correct";
+                score++;
+                lableScoreNum.setText("" + score);
+            } else {
+                //is incorrect
+                result = "Incorrect";
+            }
+            labelResults.setText("The Correct answer is:" + answer + "Your answer is " + result);
+            questionNum++;
+            answered = false;
+
+        } else if (questionNum > 9) {
+            
+            //go to results
+            new QuizResultsSean(score).setVisible(true);
+            this.setVisible(false);
+            this.dispose();
+        } else {
+            labelResults.setText("");
+            //Set question Details
+            multipleCoiceAnswers.clearSelection();
+            labelAskQuestion.setText(question);
+            lableQNumber.setText("" + (questionNum + 1));
+            labelAOption.setText(a);
+            labelBOption.setText(b);
+            labelCOption.setText(c);
+            labelDOption.setText(d);
+            answered = true;
+
+        }
+    }//GEN-LAST:event_buttonSubmitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -318,16 +354,12 @@ public class QuizSean extends javax.swing.JFrame {
     private javax.swing.JLabel labelAskQuestion;
     private javax.swing.JLabel labelBOption;
     private javax.swing.JLabel labelCOption;
-    private javax.swing.JLabel labelCompletedNum;
     private javax.swing.JLabel labelDOption;
-    private javax.swing.JLabel labelProgressbar;
     private javax.swing.JLabel labelQuestion;
     private javax.swing.JLabel labelResults;
     private javax.swing.JLabel labelScore;
-    private javax.swing.JLabel lableCompleted;
     private javax.swing.JLabel lableQNumber;
     private javax.swing.JLabel lableScoreNum;
     private javax.swing.ButtonGroup multipleCoiceAnswers;
-    private javax.swing.JProgressBar progressQuiz;
     // End of variables declaration//GEN-END:variables
 }
