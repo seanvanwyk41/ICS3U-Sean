@@ -1,7 +1,7 @@
 /*
  * Name: Quiz
- * Date: 10-06-2015 (DD-MM-YYYY)
- * Version: v0.3
+ * Date: 12-06-2015 (DD-MM-YYYY)
+ * Version: v0.4
  * Author: Sean van Wyk
  * Description: Program to run a quiz to test the user
  */
@@ -60,24 +60,27 @@ public class QuizSean extends javax.swing.JFrame {
 
         //randomise questions list
         Collections.shuffle(questionList);
+        
+        //Set start button
+        buttonSubmit.setText("Start");
 
-        //Loop for first 10 values in a randomized list
-        for (int i = 0; i < questionNum; i++) {
-
-            //create element location shortcuts
-            Element questionLoc = questions.getChildElements().get(questionList.get(i));
-            Element choicesLoc = questionLoc.getFirstChildElement("choices");
-
-            //output Question Values
-            System.out.println("Question " + (i + 1));
-            System.out.println(questionLoc.getFirstChildElement("number").getValue());
-            System.out.println(questionLoc.getFirstChildElement("Asks").getValue());
-            System.out.println(questionLoc.getFirstChildElement("Answer").getValue());
-            System.out.println("a. " + choicesLoc.getFirstChildElement("a").getValue());
-            System.out.println("b. " + choicesLoc.getFirstChildElement("b").getValue());
-            System.out.println("c. " + choicesLoc.getFirstChildElement("c").getValue());
-            System.out.println("d. " + choicesLoc.getFirstChildElement("d").getValue());
-            System.out.println("---------------------------------");
+//        Loop for first 10 values in a randomized list
+//        for (int i = 0; i < questionNum; i++) {
+//
+//            create element location shortcuts
+//            Element questionLoc = questions.getChildElements().get(questionList.get(i));
+//            Element choicesLoc = questionLoc.getFirstChildElement("choices");
+//
+//            output Question Values
+//            System.out.println("Question " + (i + 1));
+//            System.out.println(questionLoc.getFirstChildElement("number").getValue());
+//            System.out.println(questionLoc.getFirstChildElement("Asks").getValue());
+//            System.out.println(questionLoc.getFirstChildElement("Answer").getValue());
+//            System.out.println("a. " + choicesLoc.getFirstChildElement("a").getValue());
+//            System.out.println("b. " + choicesLoc.getFirstChildElement("b").getValue());
+//            System.out.println("c. " + choicesLoc.getFirstChildElement("c").getValue());
+//            System.out.println("d. " + choicesLoc.getFirstChildElement("d").getValue());
+//            System.out.println("---------------------------------");
 
         }
 
