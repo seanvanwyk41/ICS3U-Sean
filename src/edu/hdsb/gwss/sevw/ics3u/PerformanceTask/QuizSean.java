@@ -251,23 +251,26 @@ public class QuizSean extends javax.swing.JFrame {
         Element choicesLoc = questionLoc.getFirstChildElement("choices");
         String answer = questionLoc.getFirstChildElement("Answer").getValue();
         String question = questionLoc.getFirstChildElement("Asks").getValue();
-        String a = choicesLoc.getFirstChildElement("a").getValue();
-        String b = choicesLoc.getFirstChildElement("b").getValue();
-        String c = choicesLoc.getFirstChildElement("c").getValue();
-        String d = choicesLoc.getFirstChildElement("d").getValue();
+        
+        List<String> questionOrderList = Arrays.asList("a","b","c","d");
+        Collections.shuffle(questionOrderList);
+        String one = choicesLoc.getFirstChildElement(questionOrderList.get(0)).getValue();
+        String two = choicesLoc.getFirstChildElement(questionOrderList.get(1)).getValue();
+        String three = choicesLoc.getFirstChildElement(questionOrderList.get(2)).getValue();
+        String four = choicesLoc.getFirstChildElement(questionOrderList.get(3)).getValue();
         String result;
         String chosen;
-
+        
         if (answered) {
             buttonSubmit.setText("Next Question");
             if (buttonA.isSelected()) {
-                chosen = "a";
+                chosen = questionOrderList.get(0);
             } else if (buttonB.isSelected()) {
-                chosen = "b";
+                chosen = questionOrderList.get(1);
             } else if (buttonC.isSelected()) {
-                chosen = "c";
+                chosen = questionOrderList.get(2);
             } else if (buttonD.isSelected()) {
-                chosen = "d";
+                chosen = questionOrderList.get(3);
             } else {
                 chosen = "wrong";
             }
@@ -293,15 +296,18 @@ public class QuizSean extends javax.swing.JFrame {
             this.setVisible(false);
             this.dispose();
         } else {
+            
+            
+
             labelResults.setText("");
             //Set question Details
             multipleCoiceAnswers.clearSelection();
             labelAskQuestion.setText(question);
             lableQNumber.setText("" + (questionNum + 1));
-            labelAOption.setText(a);
-            labelBOption.setText(b);
-            labelCOption.setText(c);
-            labelDOption.setText(d);
+            labelAOption.setText(one);
+            labelBOption.setText(two);
+            labelCOption.setText(three);
+            labelDOption.setText(four);
             answered = true;
 
         }
