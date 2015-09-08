@@ -21,12 +21,16 @@ public class QuizResultsSean extends javax.swing.JFrame {
     public QuizResultsSean(int score) {
         
         initComponents();
+        
+        //Result display
         labelNumerator.setText("" + score);
         if (score < 10) {
             labelPercentValue.setText("" + score + "0");
         } else {
             labelPercentValue.setText("10");
         }
+        
+        //Switch for message display
         switch (score) {
             case 0:
                 break;

@@ -23,7 +23,7 @@ public class Y2K_Problem_Detecter {
     // Set up scanners
     Scanner input = new Scanner(System.in);
     int current =Calendar.getInstance().get(Calendar.YEAR);
-    
+
     // Get birth year from user
     System.out.println("Insert Year of birth");
     int birth= input.nextInt();

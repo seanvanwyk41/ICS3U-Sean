@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<Accounts>
+    <Account>
+        <Name>Bank</Name>
+        <Transactions>
+            <Transaction>
+                <Amount>234.54</Amount>
+                <Type>Debit</Type>
+                <Date>
+                    <year>2015</year>
+                    <week>24</week>
+                    <day>1</day>
+                </Date>
+                <Description>Exhisting balance</Description>
+            </Transaction>
+        </Transactions>
+        <Total>234.54</Total>
+        <Date>
+            <year>2015</year>
+            <week>24</week>
+            <day>1</day>
+        </Date>
+        <Type>Debit</Type>
+    </Account>
+    <Account>
+        <Name></Name>
+        <Transactions></Transactions>
+        <Total></Total>
+        <Date></Date>
+        <Type></Type>
+    </Account>
+</Accounts>

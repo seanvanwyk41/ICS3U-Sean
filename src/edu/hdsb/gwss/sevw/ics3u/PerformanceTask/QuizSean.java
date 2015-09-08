@@ -247,13 +247,19 @@ public class QuizSean extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonEndActionPerformed
 
     private void buttonSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSubmitActionPerformed
+       //Create element location shortcuts
         Element questionLoc = questions.getChildElements().get((int) questionList.get(questionNum));
         Element choicesLoc = questionLoc.getFirstChildElement("choices");
+        
+        //get question and answer from file
         String answer = questionLoc.getFirstChildElement("Answer").getValue();
         String question = questionLoc.getFirstChildElement("Asks").getValue();
         
+        //creating a list and shuffeling it
         List<String> questionOrderList = Arrays.asList("a","b","c","d");
         Collections.shuffle(questionOrderList);
+        
+        //creating a string for multiple choice answers
         String one = choicesLoc.getFirstChildElement(questionOrderList.get(0)).getValue();
         String two = choicesLoc.getFirstChildElement(questionOrderList.get(1)).getValue();
         String three = choicesLoc.getFirstChildElement(questionOrderList.get(2)).getValue();
@@ -261,6 +267,7 @@ public class QuizSean extends javax.swing.JFrame {
         String result;
         String chosen;
         
+        //Get answered value
         if (answered) {
             buttonSubmit.setText("Next Question");
             if (buttonA.isSelected()) {
@@ -275,6 +282,7 @@ public class QuizSean extends javax.swing.JFrame {
                 chosen = "wrong";
             }
 
+            //if the answer is correct
             if (chosen.equals(answer)) {
                 
                 //is correct
@@ -296,10 +304,8 @@ public class QuizSean extends javax.swing.JFrame {
             this.setVisible(false);
             this.dispose();
         } else {
-            
-            
-
             labelResults.setText("");
+            
             //Set question Details
             multipleCoiceAnswers.clearSelection();
             labelAskQuestion.setText(question);
